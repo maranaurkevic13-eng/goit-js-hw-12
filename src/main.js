@@ -24,7 +24,7 @@ formEl.addEventListener('submit', async e => {
     clearGallery();     
 
     const formData = new FormData(e.target);
-    const value = formData.get('search-text');
+    const value = formData.get('search-text').trim();
 
     if (!value) {
         iziToast.error({
@@ -33,7 +33,7 @@ formEl.addEventListener('submit', async e => {
         return;
     }  
 
-    currentQuery = value.trim();
+    currentQuery = value;
     currentPage = 1;
     showLoader();
 
