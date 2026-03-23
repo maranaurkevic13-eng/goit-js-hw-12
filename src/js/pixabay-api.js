@@ -10,7 +10,7 @@ export async function getImagesByQuery(query, page = 1) {
         q: query,
         image_type: "photo",
         orientation: "horizontal",
-        safesearch: "true",
+        safesearch: true,
         page,
         per_page: PER_PAGE,
     };
